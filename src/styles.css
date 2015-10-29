@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,700,700italic);
+@import "normalize.css";
+
+:root {
+  --base-color: ${color}; /* The base color is injected at build time */
+  --asset-path: /gitbook/plugins/gitbook-plugin-zambezi-docs;
+}
+
+@import "type.css";
+@import "layout.css";
+@import "summary.css";
+@import "header.css";
+@import "page.css";
+@import "footer.css";

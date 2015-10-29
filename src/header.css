@@ -1,0 +1,59 @@
+:root {
+  --header-height: 60px;
+}
+
+.book-header {
+  position: fixed;
+  height: var(--header-height);
+  padding: 25px 30px 15px 30px;
+  line-height: 15px;
+}
+
+.summary-toggle {
+  transform: var(--summary-transform-hide);
+  transition: var(--summary-toggle-transition);
+}
+
+.with-summary .summary-toggle {
+  transform: var(--summary-transform-show);
+}
+
+.summary-toggle,
+.book-header-tools > * {
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.book-header-tools {
+  width: auto;
+}
+
+.book-header-tools > *:not(:last-child) {
+  margin-right: 40px;
+}
+
+.summary-toggle {
+  background-image: url(var(--asset-path)/images/icon-summary.svg);
+  width: 20px;
+  line-height: 15px;
+}
+
+.font-toggle {
+  background-image: url(var(--asset-path)/images/icon-type.svg);
+  width: 12px;
+  line-height: 14px;
+}
+
+.search-toggle {
+  background-image: url(var(--asset-path)/images/icon-search.svg);
+  width: 18px;
+  line-height: 19px;
+}
+
+.book-header [rel=glossary] {
+  background-image: url(var(--asset-path)/images/icon-glossary.svg);
+  width: 24px;
+  line-height: 14px;
+}

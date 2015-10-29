@@ -1,0 +1,45 @@
+{
+  "name": "gitbook-plugin-zambezi-docs",
+  "version": "0.0.0",
+  "description": "Zambezi Documentation Site Generator for GitBook",
+  "main": "index.js",
+  "engines": {
+    "gitbook": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zambezi-websdk/gitbook-plugin-zambezi-docs.git"
+  },
+  "keywords": [
+    "zambezi",
+    "documentation",
+    "gitbook"
+  ],
+  "author": "Marcus Stade <marcus@stade.se> (http://madebystade.se/)",
+  "bugs": {
+    "url": "https://github.com/zambezi-websdk/gitbook-plugin-zambezi-docs/issues"
+  },
+  "homepage": "https://github.com/zambezi-websdk/gitbook-plugin-zambezi-docs#readme",
+  "dependencies": {
+    "cssnext": "1.8.4",
+    "d3": "3.5.6",
+    "is-image": "1.0.1",
+    "normalize.css": "3.0.3"
+  },
+  "gitbook": {
+    "properties": {
+      "logo": {
+        "type": "string",
+        "default": "",
+        "required": true,
+        "description": "The path to the site logo."
+      },
+      "color": {
+        "type": "string",
+        "default": "#a2195b",
+        "required": true,
+        "description": "The base color of the site."
+      }
+    }
+  }
+}

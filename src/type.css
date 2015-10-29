@@ -1,0 +1,107 @@
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 54px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 6px;
+}
+
+:not(h1,:first-child) + h1 {
+  border-top: 1px solid #e2e2e2;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 54px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 54px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:#686868;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0px;
+  margin-bottom: 54px;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 23px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+  border-radius: 1px;
+}
+
+code {
+  padding: 0 0.2em;
+  background-color: #f4f4f4;
+  color: #686868;
+  border-radius: 1px;
+}
+
+pre code {
+  padding: 0;
+  border-radius: 0;
+}
+
+a {
+  color: var(--base-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sanitation */
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+b, strong, em, small, code {
+  line-height: 1;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}

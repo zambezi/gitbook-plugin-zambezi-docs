@@ -1,0 +1,76 @@
+:root {
+  --summary-width: 250px;
+  --summary-transform-show: translateX(var(--summary-width));
+  --summary-transform-hide: translateX(0);
+  --summary-toggle-transition: transform 250ms ease;
+}
+
+.book-summary {
+  position: absolute;
+  width: calc(var(--summary-width)-10px);
+  top: 0; left: 0; bottom: 0;
+  background-color: #eaeaea;
+  border-right: 1px solid white;
+  padding-top: 80px;
+  overflow-y: auto;
+  z-index: 10;
+  transform: translateX(-var(--summary-width));
+  transition: var(--summary-toggle-transition);
+  border-left: 1px solid white;
+  box-shadow: #eaeaea 10px 0 0 0;
+}
+
+.with-summary .book-summary {
+  transform: translateX(0);
+}
+
+.summary {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #fff;
+}
+
+.summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.summary li {
+  line-height: 40px;
+  font-size: 17px;
+  z-index: 1;
+  color: #515151;
+}
+
+.summary li::before {
+  position: absolute;
+  content: '_';
+  left: 0; right: 0;
+  border-bottom: 1px solid #fff;
+  z-index: -1;
+  line-height: 40px;
+  font-size: 0;
+  pointer-events: none;
+}
+
+.summary li:hover::before ,
+.summary li.active::before {
+  background-color: #fff;
+}
+
+.chapter-root {
+  padding-left: 40px;
+}
+
+.chapter-root > .chapter-title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.chapter-list:not(.chapter-root) > .chapter-title {
+  font-weight: 600;
+}
+
+:not(.chapter-root) > .articles {
+  padding-left: 20px;
+}

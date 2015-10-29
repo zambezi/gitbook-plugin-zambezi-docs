@@ -1,0 +1,24 @@
+<header class="book-header stack" role="navigation">
+  <a href="#" 
+    rel="summary"
+    class="summary-toggle panel"
+    aria-label="{{ __("SUMMARY_TOGGLE") }}">{{ __("SUMMARY_TOGGLE") }}</a>
+  
+  <div class="book-header-tools panel">
+    <a href="#" 
+      rel="font-settings"
+      class="font-toggle"
+      aria-label="{{ __("FONTSETTINGS_TOGGLE") }}">{{ __("FONTSETTINGS_TOGGLE") }}</a>
+
+    {% if glossary.length > 0 %}
+    <a href="{{ basePath }}/GLOSSARY.html" 
+      rel="glossary"
+      aria-label="{{ __("GLOSSARY_OPEN") }}">{{ __("GLOSSARY_OPEN") }}</a>
+    {% endif %}
+
+    <a href="#" 
+      rel="search"
+      class="search-toggle"
+      aria-label="{{ __("SEARCH_TOGGLE") }}">{{ __("SEARCH_TOGGLE") }}</a>
+  </div>
+</header>

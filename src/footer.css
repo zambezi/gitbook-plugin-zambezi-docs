@@ -1,0 +1,25 @@
+:root {
+  --footer-height: 80px;
+}
+
+.book-footer {
+  height: var(--footer-height);
+  padding: 25px 30px;
+  background-color: var(--base-color);
+}
+
+.powered-by {
+  background-image: url(var(--asset-path)/images/logo-powered-by.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+  width: 112px;
+  height: 30px;
+  font-size: 0;
+  transform: var(--summary-transform-hide);
+  transition: var(--summary-toggle-transition);
+}
+
+.with-summary .powered-by {
+  transform: var(--summary-transform-show);
+}
