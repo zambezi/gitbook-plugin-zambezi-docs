@@ -2,17 +2,15 @@ import { get, set } from './settings'
 import shortcut from './shortcut'
 import d3 from 'd3'
 
-toggleSummary(get('with-summary', true))
-
-shortcut(['s'], toggleSummary)
+shortcut(['s'], toggle)
 
 d3.select('.summary-toggle')
   .on('click', function(e) {
     d3.event.preventDefault()
-    toggleSummary()
+    toggle()
   })
 
-function toggleSummary(value) {
+export function toggle(value) {
   var book = d3.select('.book')
 
   if (value === undefined) {
