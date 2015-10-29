@@ -40,16 +40,16 @@
   line-height: 15px;
 }
 
-.font-toggle {
-  background-image: url(var(--asset-path)/images/icon-type.svg);
-  width: 12px;
-  line-height: 14px;
-}
-
 .search-toggle {
   background-image: url(var(--asset-path)/images/icon-search.svg);
   width: 18px;
   line-height: 19px;
+}
+
+.book-header [rel=edit] {
+  background-image: url(var(--asset-path)/images/icon-edit.svg);
+  width: 18px;
+  line-height: 18px;
 }
 
 .book-header [rel=glossary] {

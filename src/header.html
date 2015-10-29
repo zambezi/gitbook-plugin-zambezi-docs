@@ -5,10 +5,11 @@
     aria-label="{{ __("SUMMARY_TOGGLE") }}">{{ __("SUMMARY_TOGGLE") }}</a>
   
   <div class="book-header-tools panel">
-    <a href="#" 
-      rel="font-settings"
-      class="font-toggle"
-      aria-label="{{ __("FONTSETTINGS_TOGGLE") }}">{{ __("FONTSETTINGS_TOGGLE") }}</a>
+    {% if options.github %}
+    <a href="https://github.com/{{ options.github.user }}/{{ options.github.repo }}/edit/{{ options.github.branch }}/{{ progress.current.path }}"
+      rel="edit" title="Edit this page!"
+      aria-label="Edit page in GitHub">Edit this page!</a>
+    {% endif %}
 
     {% if glossary.length > 0 %}
     <a href="{{ basePath }}/GLOSSARY.html" 

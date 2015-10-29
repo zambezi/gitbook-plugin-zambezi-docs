@@ -30,6 +30,7 @@ module.exports = {
 
   hooks: {
     init: function() {
+      require('./lib/github')(this)
       require('./lib/install')('d3/d3.min.js')
       require('./lib/compile-css')(this)
     }
