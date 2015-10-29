@@ -7,8 +7,7 @@ exports.website =
 exports.hooks =
   { init: function() {
       require('./lib/github')(this)
-      require('./lib/compile-js')(this)
-      require('./lib/compile-css')(this)
+      require('./lib/compile')(this)
   } }
 
 exports.templates =
