@@ -9,8 +9,6 @@
 }
 
 .powered-by {
-  background-image: url(var(--asset-path)/images/logo-powered-by.svg);
-  background-repeat: no-repeat;
   display: inline-block;
   vertical-align: top;
   width: 112px;

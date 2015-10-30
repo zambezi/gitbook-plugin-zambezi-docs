@@ -1,11 +1,10 @@
+{% from 'macros/button.html' import button %}
+
 <footer class="book-footer panel" role="contentinfo">
-  <a href="#" class="powered-by">Powered by Zambezi</a>
-
-  <a href="#" target="_blank" class="sharing-link" data-sharing="link" aria-label="Share">Share link</a>
-
-  <a href="#" target="_blank" class="sharing-link sharing-link-facebook" data-sharing="facebook" aria-label="Facebook">Share on Facebook</a>
-
-  <a href="#" target="_blank" class="sharing-link sharing-link-twitter" data-sharing="twitter" aria-label="Twitter">Share on Twitter</a>
-
-  <a href="#" target="_blank" class="sharing-link sharing-link-google-plus" data-sharing="google-plus" aria-label="Google">Share on Google+</a>
+  {{ button
+    ( label='Powered by Zambezi'
+    , icon='powered-by'
+    , class='powered-by no-t'
+    )
+  }}
 </footer>

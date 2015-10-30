@@ -28,6 +28,7 @@
 
 .book-header-tools {
   width: auto;
+  vertical-align: middle;
 }
 
 .book-header-tools > *:not(:last-child) {
@@ -35,25 +36,25 @@
 }
 
 .summary-toggle {
-  background-image: url(var(--asset-path)/images/icon-summary.svg);
   width: 20px;
+  height: 15px;
   line-height: 15px;
 }
 
 .search-toggle {
-  background-image: url(var(--asset-path)/images/icon-search.svg);
   width: 18px;
+  height: 18px;
   line-height: 19px;
 }
 
 .book-header [rel=edit] {
-  background-image: url(var(--asset-path)/images/icon-edit.svg);
   width: 18px;
+  height: 18px;
   line-height: 18px;
 }
 
 .book-header [rel=glossary] {
-  background-image: url(var(--asset-path)/images/icon-glossary.svg);
   width: 24px;
+  height: 14px;
   line-height: 14px;
 }

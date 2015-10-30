@@ -34,15 +34,25 @@
       </main>
     </div>
 
+    {% from './macros/button.html' import button %}
+
     {% if progress.current.prev and progress.current.prev.path %}
-    <a href="{{ basePath }}/{{ progress.current.prev.path|contentLink }}" class="navigation navigation-prev {% if not (progress.current.next and progress.current.next.path) %}navigation-unique{% endif %}" aria-label="Previous page: {{ progress.current.prev.title }}" rel="prev">
-      Previous page: {{ progress.current.prev.title }}
-    </a>
+      {{ button
+        ( href=basePath + '/' + progress.current.prev.path|contentLink
+        , class='navigation navigation-prev'
+        , label='Previous page: ' + progress.current.prev.title
+        , rel='prev'
+        )
+      }}
     {% endif %}
     {% if progress.current.next and progress.current.next.path %}
-    <a href="{{ basePath }}/{{ progress.current.next.path|contentLink }}" class="navigation navigation-next {% if not (progress.current.prev or progress.current.prev.path) %}navigation-unique{% endif %}" aria-label="Next page: {{ progress.current.next.title }}" rel="next">
-      Next page: {{ progress.current.next.title }}
-    </a>
+      {{ button
+        ( href=basePath + '/' + progress.current.next.path|contentLink
+        , class='navigation navigation-next'
+        , label='Next page: ' + progress.current.next.title
+        , rel='next'
+        )
+      }}
     {% endif %}
     {% include "./footer.html" %}
   </div>

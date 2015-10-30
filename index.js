@@ -8,7 +8,8 @@ exports.hooks =
   { init: function() {
       require('./lib/github')(this)
       require('./lib/compile')(this)
-  } }
+    }
+  }
 
 exports.templates =
   { "site:page"     : "./src/page.html"
