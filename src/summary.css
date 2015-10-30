@@ -35,14 +35,22 @@
   padding: 0;
 }
 
-.summary li {
+.chapter-title {
+  display: block;
   line-height: 40px;
   font-size: 17px;
   z-index: 1;
+}
+
+span.chapter-title {
   color: #515151;
 }
 
-.summary li::before {
+a.chapter-title {
+  text-decoration: none;
+}
+
+.chapter-title::before {
   position: absolute;
   content: '_';
   left: 0; right: 0;
@@ -53,8 +61,8 @@
   pointer-events: none;
 }
 
-.summary li:hover::before ,
-.summary li.active::before {
+.chapter-title:hover::before ,
+.active .chapter-title::before {
   background-color: #fff;
 }
 
