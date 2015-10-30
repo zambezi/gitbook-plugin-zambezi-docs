@@ -1,8 +1,5 @@
 import { get, set } from './settings'
-import shortcut from './shortcut'
 import d3 from 'd3'
-
-shortcut(['s'], toggle)
 
 d3.select('.summary-toggle')
   .on('click', function(e) {
