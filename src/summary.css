@@ -7,16 +7,13 @@
 
 .book-summary {
   position: absolute;
-  width: calc(var(--summary-width)-10px);
+  width: calc(var(--summary-width));
   top: 0; left: 0; bottom: 0;
   background-color: #eaeaea;
-  border-right: 1px solid white;
   overflow-y: auto;
   z-index: 10;
   transform: translateX(-var(--summary-width));
   transition: var(--summary-toggle-transition);
-  border-left: 1px solid white;
-  box-shadow: #eaeaea 10px 0 0 0;
 }
 
 .book-summary::before {
@@ -30,14 +27,25 @@
   opacity: .4;
 }
 
+.summary::after,
+.book-summary::after {
+  content: '';
+  position: absolute;
+  top:0; right: 0; bottom: 0;
+  width: 11px;
+  border-left: 1px solid #fff;
+  box-shadow: #eaeaea 11px 0 0 0 inset;
+}
+
 .with-summary .book-summary {
   transform: translateX(0);
 }
 
 .summary {
+  position: relative;
   list-style: none;
-  padding: 0;
-  border-bottom: 1px solid #fff;
+  margin: 0;
+  padding: 0 0 25px 0;
 }
 
 .summary ul {
