@@ -40,14 +40,16 @@
   line-height: 40px;
   font-size: 17px;
   z-index: 1;
-}
-
-span.chapter-title {
   color: #515151;
+  text-decoration: none;
 }
 
-a.chapter-title {
+.chapter-title:hover {
   text-decoration: none;
+}
+
+.active .chapter-title {
+  color: var(--base-color);
 }
 
 .chapter-title::before {
