@@ -14,7 +14,7 @@
 {% block description %}{% if progress.current.level == "0" %}{{ description }}{% endif %}{% endblock %}
 
 {% block content %}
-<div class="book with-summary" data-level="{{ progress.current.level }}" data-chapter-title="{{ progress.current.title }}" data-filepath="{{ progress.current.path }}" data-basepath="{{ basePath }}" data-revision="{{ revision }}">
+<div class="book" data-level="{{ progress.current.level }}" data-chapter-title="{{ progress.current.title }}" data-filepath="{{ progress.current.path }}" data-basepath="{{ basePath }}" data-revision="{{ revision }}">
   {% include "./summary.html" %}
   <div class="book-body">
     {% include "./header.html" %}
