@@ -6,6 +6,7 @@ exports.website =
 
 exports.hooks =
   { init: require('./lib/build')
+  , "page:before": require('./lib/build/logo')
   }
 
 exports.templates =

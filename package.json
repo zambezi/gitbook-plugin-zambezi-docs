@@ -31,12 +31,9 @@
     "normalize.css": "3.0.3",
     "parse-git-config": "0.3.1",
     "parse-github-url": "0.2.1",
-    "pixrem": "3.0.0",
     "postcss": "5.0.10",
-    "postcss-calc": "5.0.0",
-    "postcss-custom-properties": "5.0.0",
-    "postcss-import": "7.1.0",
-    "postcss-pseudoelements": "3.0.0"
+    "postcss-cssnext": "2.2.0",
+    "postcss-import": "7.1.0"
   },
   "gitbook": {
     "properties": {

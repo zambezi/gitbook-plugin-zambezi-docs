@@ -1,8 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,700,700italic);
 @import "normalize.css";
 
 :root {
-  --base-color: ${color}; /* The base color is injected at build time */
+  /* The logo and base color are injected at build time */
+  --logo: /${logo};
+  --base-color: ${color};
   --asset-path: /gitbook/plugins/gitbook-plugin-zambezi-docs;
 }
 

@@ -22,6 +22,9 @@
       <main class="page-wrapper" tabindex="-1" role="main">
         <article class="page-inner">
         {% block page_inner %}
+        {% if progress.current.level == "0" %}
+          <img class="logo logo-main" src="{{ options.logo }}">
+        {% endif %}
         {% for section in content %}
           <section class="{{ section.type }}" id="section-{{ section.id }}">
           {% if section.type == "normal" %}

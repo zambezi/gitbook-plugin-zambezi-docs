@@ -11,13 +11,23 @@
   top: 0; left: 0; bottom: 0;
   background-color: #eaeaea;
   border-right: 1px solid white;
-  padding-top: 80px;
   overflow-y: auto;
   z-index: 10;
   transform: translateX(-var(--summary-width));
   transition: var(--summary-toggle-transition);
   border-left: 1px solid white;
   box-shadow: #eaeaea 10px 0 0 0;
+}
+
+.book-summary::before {
+  background-image: url(var(--logo));
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 20px 0 20px 40px;
+  filter: grayscale(1) brightness(2);
+  opacity: .4;
 }
 
 .with-summary .book-summary {

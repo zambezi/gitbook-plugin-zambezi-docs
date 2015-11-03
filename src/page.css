@@ -52,3 +52,18 @@
 .page-wrapper {
   outline: 0
 }
+
+.logo-main {
+  display: block;
+  max-width: 180px;
+  max-height: 180px;
+  margin: 0 auto;
+}
+
+[data-level="0"] main h1:first-of-type {
+  margin-bottom: 130px;
+  font-size: 120px;
+  line-height: 120px;
+  font-weight: bold;
+  text-align: center;
+}
