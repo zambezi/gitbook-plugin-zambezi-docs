@@ -1,0 +1,60 @@
+:root {
+  --header-height: 60px;
+}
+
+.book-header {
+  position: fixed;
+  height: var(--header-height);
+  padding: 25px 30px 15px 30px;
+  line-height: 15px;
+}
+
+.summary-toggle {
+  transform: var(--summary-transform-hide);
+  transition: var(--summary-toggle-transition);
+}
+
+.with-summary .summary-toggle {
+  transform: var(--summary-transform-show);
+}
+
+.summary-toggle,
+.book-header-tools > * {
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.book-header-tools {
+  width: auto;
+  vertical-align: middle;
+}
+
+.book-header-tools > *:not(:last-child) {
+  margin-right: 40px;
+}
+
+.summary-toggle {
+  width: 20px;
+  height: 15px;
+  line-height: 15px;
+}
+
+.search-toggle {
+  width: 18px;
+  height: 18px;
+  line-height: 19px;
+}
+
+.book-header [rel=edit] {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.book-header [rel=glossary] {
+  width: 24px;
+  height: 14px;
+  line-height: 14px;
+}

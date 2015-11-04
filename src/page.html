@@ -1,0 +1,86 @@
+{% extends "./layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  {% if progress.current.next and progress.current.next.path %}
+  <link rel="next" href="{{ basePath }}/{{ progress.current.next.path|contentLink }}" />
+  {% endif %}
+  {% if progress.current.prev and progress.current.prev.path %}
+  <link rel="prev" href="{{ basePath }}/{{ progress.current.prev.path|contentLink }}" />
+  {% endif %}
+{% endblock %}
+
+{% block title %}{{ progress.current.title }} | {{ title }}{% endblock %}
+{% block description %}{% if progress.current.level == "0" %}{{ description }}{% endif %}{% endblock %}
+
+{% block content %}
+<div class="book" data-level="{{ progress.current.level }}" data-chapter-title="{{ progress.current.title }}" data-filepath="{{ progress.current.path }}" data-basepath="{{ basePath }}" data-revision="{{ revision }}">
+  {% include "./summary.html" %}
+  <div class="book-body">
+    {% include "./header.html" %}
+    <div class="body-inner">
+      <main class="page-wrapper" tabindex="-1" role="main">
+        <article class="page-inner">
+        {% block page_inner %}
+        {% if progress.current.level == "0" %}
+          <img class="logo logo-main" src="{{ options.logo }}">
+        {% endif %}
+        {% for section in content %}
+          <section class="{{ section.type }}" id="section-{{ section.id }}">
+          {% if section.type == "normal" %}
+            {% autoescape false %}{{ section.content }}{% endautoescape %}
+          {% endif %}
+          </section>
+        {% endfor %}
+        {% endblock %}
+        </article>
+      </main>
+    </div>
+
+    {% from './macros/button.html' import button %}
+
+    {% if progress.current.prev and progress.current.prev.path %}
+      {{ button
+        ( href=basePath + '/' + progress.current.prev.path|contentLink
+        , class='navigation navigation-prev'
+        , label='Previous page: ' + progress.current.prev.title
+        , rel='prev'
+        )
+      }}
+    {% endif %}
+    {% if progress.current.next and progress.current.next.path %}
+      {{ button
+        ( href=basePath + '/' + progress.current.next.path|contentLink
+        , class='navigation navigation-next'
+        , label='Next page: ' + progress.current.next.title
+        , rel='next'
+        )
+      }}
+    {% endif %}
+    {% include "./footer.html" %}
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+{% for resource in plugins.resources.js %}
+  {% if resource.url %}
+  <script src="{{ resource.url }}"></script>
+  {% else %}
+  <script src="{{ staticBase }}/plugins/{{ resource.path }}"></script>
+  {% endif %}
+{% endfor %}
+{% endblock %}
+
+{% block style %}
+  {% for resource in plugins.resources.css %}
+    {% if resource.url %}
+    <link rel="stylesheet" href="{{ resource.url }}">
+    {% else %}
+    <link rel="stylesheet" href="{{ staticBase }}/plugins/{{ resource.path }}">
+    {% endif %}
+  {% endfor %}
+  {% for type, style in styles %}
+    <link rel="stylesheet" href="{{ basePath }}/{{ style }}">
+  {% endfor %}
+{% endblock %}

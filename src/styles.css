@@ -1,0 +1,17 @@
+@import "normalize.css";
+
+:root {
+  /* The logo and base color are injected at build time */
+  --logo: /${logo};
+  --base-color: ${color};
+  --asset-path: /gitbook/plugins/gitbook-plugin-zambezi-docs;
+}
+
+@import "type.css";
+@import "macros/button.css";
+@import "icons.css";
+@import "layout.css";
+@import "summary.css";
+@import "header.css";
+@import "page.css";
+@import "footer.css";

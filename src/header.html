@@ -1,0 +1,30 @@
+{% from "./macros/button.html" import button %}
+
+<header class="book-header stack" role="navigation">
+  {{ button
+    ( rel='summary'
+    , label=__('SUMMARY_TOGGLE')
+    , class='summary-toggle panel'
+    )
+  }}
+  
+  <div class="book-header-tools panel">
+    {% if options.github %}
+      {{ button
+        ( href=['https://github.com', options.github.user, options.github.repo, 'edit', options.github.branch, progress.current.path]|join('/')
+        , rel='edit'
+        , label='Edit this page!'
+        )
+      }}
+    {% endif %}
+
+    {% if glossary.length > 0 %}
+      {{ button
+        ( href=basePath + '/GLOSSARY.html'
+        , rel='glossary'
+        , label=__('GLOSSARY_OPEN')
+        )
+      }}
+    {% endif %}
+  </div>
+</header>

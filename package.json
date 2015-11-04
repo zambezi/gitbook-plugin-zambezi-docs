@@ -1,0 +1,56 @@
+{
+  "name": "gitbook-plugin-zambezi-docs",
+  "version": "0.0.0",
+  "description": "Zambezi Documentation Site Generator for GitBook",
+  "main": "index.js",
+  "engines": {
+    "gitbook": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zambezi-websdk/gitbook-plugin-zambezi-docs.git"
+  },
+  "keywords": [
+    "zambezi",
+    "documentation",
+    "gitbook"
+  ],
+  "author": "Marcus Stade <marcus@stade.se> (http://madebystade.se/)",
+  "bugs": {
+    "url": "https://github.com/zambezi-websdk/gitbook-plugin-zambezi-docs/issues"
+  },
+  "homepage": "https://github.com/zambezi-websdk/gitbook-plugin-zambezi-docs#readme",
+  "dependencies": {
+    "autoprefixer": "6.0.3",
+    "babelify": "6.4.0",
+    "browserify": "12.0.1",
+    "d3": "3.5.6",
+    "git-branch": "0.3.0",
+    "is-image": "1.0.1",
+    "mousetrap": "1.5.3",
+    "normalize.css": "3.0.3",
+    "parse-git-config": "0.3.1",
+    "parse-github-url": "0.2.1",
+    "postcss": "5.0.10",
+    "postcss-cssnext": "2.2.0",
+    "postcss-import": "7.1.0"
+  },
+  "gitbook": {
+    "properties": {
+      "logo": {
+        "type": "string",
+        "default": "",
+        "description": "The path to the site logo."
+      },
+      "color": {
+        "type": "string",
+        "default": "#a2195b",
+        "description": "The base color of the site."
+      }
+    },
+    "required": [
+      "logo",
+      "color"
+    ]
+  }
+}

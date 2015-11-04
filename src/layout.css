@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  border-top: 15px solid var(--base-color);
+}
+
+.stack, .panel { display: inline-block; vertical-align: top; width: 100%; }
+.stack { font-size: 0; text-align: justify; }
+.stack:after { content: ""; display: inline-block; width: 100%; }
+.panel { font-size: 1rem; text-align: left; }

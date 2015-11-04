@@ -1,0 +1,46 @@
+{% macro articles(_articles, _top) %}
+  {% for item in _articles %}
+    <li class="chapter{{ ' active' if item.path and item.path == _input }}{{ ' chapter-root' if _top }}{{ ' chapter-list' if item.articles.length > 0 }}"
+        data-level="{{ item.level }}"
+        {% if item.path and not item.external %}
+          data-path="{{ item.path|contentLink }}"
+        {% endif %}>
+      {% if item.path and item.exists %}
+        {% if not item.external %}
+          <a class="chapter-title" href="{{ basePath }}/{{ item.path|contentLink }}">
+        {% else %}
+          <a class="chapter-title" target="_blank" href="{{ item.path }}">
+        {% endif %}
+            {{ item.title }}
+          </a>
+      {% else %}
+        <span class="chapter-title">{{ item.title }}</span>
+      {% endif %}
+      {% if item.articles.length > 0 %}
+        <ul class="articles">
+          {{ articles(item.articles) }}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+{% endmacro %}
+
+<nav class="book-summary" role="navigation">
+  <ul class="summary">
+    {% set _divider = false %}
+    {% if options.links.sidebar %}
+    {% for linkTitle, link in options.links.sidebar %}
+      {% set _divider = true %}
+      <li>
+        <a href="{{ link }}" target="blank" class="custom-link">{{ linkTitle }}</a>
+      </li>
+    {% endfor %}
+    {% endif %}
+
+    {% if _divider %}
+      <li class="divider"></li>
+    {% endif %}
+
+    {{ articles(summary.chapters, true) }}
+  </ul>
+</nav>

@@ -1,0 +1,17 @@
+.svg-icon-next,
+.svg-icon-prev,
+.svg-icon-edit,
+.svg-icon-search,
+.svg-icon-summary,
+.svg-icon-glossary {
+  fill: var(--base-color);
+}
+
+#svg-icon-powered-by-logo {
+  fill: #fff;
+  opacity: .3;
+}
+
+#svg-icon-powered-by-text {
+  fill: #7c0d47;
+}

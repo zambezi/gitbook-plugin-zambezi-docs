@@ -1,0 +1,27 @@
+.button-inner {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  opacity: .3;
+  transition: opacity 250ms ease;
+}
+
+.no-t .button-inner {
+  opacity: 1;
+  transition: none;
+}
+
+.button-inner:hover {
+  opacity: 1;
+}
+
+.button-inner object {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/*.icon-edit {
+  width: 17.7002;
+  height: 17.6992;
+}*/
