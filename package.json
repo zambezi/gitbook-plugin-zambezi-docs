@@ -33,7 +33,7 @@
     "parse-github-url": "0.2.1",
     "postcss": "5.0.10",
     "postcss-cssnext": "2.2.0",
-    "postcss-import": "7.1.0"
+    "postcss-import": "7.1.2"
   },
   "gitbook": {
     "properties": {
