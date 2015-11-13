@@ -47,10 +47,6 @@
         "default": "#a2195b",
         "description": "The base color of the site."
       }
-    },
-    "required": [
-      "logo",
-      "color"
-    ]
+    }
   }
 }
