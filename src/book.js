@@ -11,7 +11,7 @@ registerNav('left', 'prev')
 registerNav('right', 'next')
 
 function registerNav(key, rel) {
-  d3.select(`[rel=${rel}]`).call(sel => {
+  d3.select(`a[rel=${rel}]`).call(sel => {
     if (sel.empty()) return
 
     let a = sel.node()
