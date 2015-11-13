@@ -8,7 +8,7 @@
 }
 
 @import "type.css";
-@import "macros/button.css";
+@import "button.css";
 @import "icons.css";
 @import "layout.css";
 @import "summary.css";
