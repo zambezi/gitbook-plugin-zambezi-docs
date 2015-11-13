@@ -1,10 +1,11 @@
-{% from 'macros/button.html' import button %}
+{% from './macros/button.html' import button %}
 
 <footer class="book-footer panel" role="contentinfo">
   {{ button
     ( label='Powered by Zambezi'
     , icon='powered-by'
     , class='powered-by no-t'
+    , staticBase=staticBase
     )
   }}
 </footer>

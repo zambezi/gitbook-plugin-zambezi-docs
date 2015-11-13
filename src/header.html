@@ -5,6 +5,7 @@
     ( rel='summary'
     , label=__('SUMMARY_TOGGLE')
     , class='summary-toggle panel'
+    , staticBase=staticBase
     )
   }}
   
@@ -14,6 +15,7 @@
         ( href=['https://github.com', options.github.user, options.github.repo, 'edit', options.github.branch, progress.current.path]|join('/')
         , rel='edit'
         , label='Edit this page!'
+        , staticBase=staticBase
         )
       }}
     {% endif %}
@@ -23,6 +25,7 @@
         ( href=basePath + '/GLOSSARY.html'
         , rel='glossary'
         , label=__('GLOSSARY_OPEN')
+        , staticBase=staticBase
         )
       }}
     {% endif %}

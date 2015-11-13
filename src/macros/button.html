@@ -1,10 +1,10 @@
-{% macro button(href, rel, label, class, icon) %}
+{% macro button(href, rel, label, class, icon, staticBase) %}
   <a href="{{ href }}" rel="{{ rel }}"
     title="{{ label }}" aria-label="{{ label }}"
     {% if class %}class="{{ class }}"{% endif %}
     {% if not href %}onclick="return false"{% endif %}>
     <span class="button-inner">
-      <object type="image/svg+xml" data="/gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-{{ icon or rel }}.svg">
+      <object type="image/svg+xml" data="{{ staticBase }}/plugins/gitbook-plugin-zambezi-docs/images/icon-{{ icon or rel }}.svg">
         {{ label }}
       </object>
     </span>
