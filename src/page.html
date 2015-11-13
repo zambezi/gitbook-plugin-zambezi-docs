@@ -45,6 +45,7 @@
         , class='navigation navigation-prev'
         , label='Previous page: ' + progress.current.prev.title
         , rel='prev'
+        , staticBase=staticBase
         )
       }}
     {% endif %}
@@ -54,6 +55,7 @@
         , class='navigation navigation-next'
         , label='Next page: ' + progress.current.next.title
         , rel='next'
+        , staticBase=staticBase
         )
       }}
     {% endif %}
