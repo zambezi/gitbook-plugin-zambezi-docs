@@ -135,3 +135,12 @@ sup, sub {
 sub {
   top: 0.4em;
 }
+
+figure {
+  margin: 40px auto;
+  max-width: 90%;
+}
+
+figure > * {
+  max-width: 100%;
+}
