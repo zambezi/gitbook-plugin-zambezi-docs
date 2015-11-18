@@ -7,14 +7,14 @@
         {% endif %}>
       {% if item.path and item.exists %}
         {% if not item.external %}
-          <a class="chapter-title" href="{{ basePath }}/{{ item.path|contentLink }}">
+          <a class="chapter-title" data-title="{{ item.title }}" href="{{ basePath }}/{{ item.path|contentLink }}">
         {% else %}
-          <a class="chapter-title" target="_blank" href="{{ item.path }}">
+          <a class="chapter-title" data-title="{{ item.title }}" target="_blank" href="{{ item.path }}">
         {% endif %}
             {{ item.title }}
           </a>
       {% else %}
-        <span class="chapter-title">{{ item.title }}</span>
+        <span class="chapter-title" data-title="{{ item.title }}">{{ item.title }}</span>
       {% endif %}
       {% if item.articles.length > 0 %}
         <ul class="articles">
