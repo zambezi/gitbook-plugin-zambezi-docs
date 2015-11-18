@@ -72,12 +72,13 @@
 
 .chapter-title::before {
   position: absolute;
-  content: '_';
+  content: attr(data-title);
   left: 0; right: 0;
   border-bottom: 1px solid #fff;
   z-index: -1;
   line-height: 40px;
-  font-size: 0;
+  padding-left: 40px;
+  color: transparent;
   pointer-events: none;
 }
 
