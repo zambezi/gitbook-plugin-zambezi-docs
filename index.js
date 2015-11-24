@@ -1,3 +1,6 @@
+Object.assign  || (Object.assign  = require('object-assign'))
+global.Promise || (global.Promise = require('pinkie-promise'))
+
 exports.website =
   { assets : "./lib/assets"
   , css    : [ "styles.css" ]
