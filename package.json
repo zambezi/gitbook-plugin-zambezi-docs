@@ -1,6 +1,6 @@
 {
   "name": "@zambezi/gitbook-plugin-zambezi-docs",
-  "version": "0.1.2",
+  "version": "1.0.0-prepare-for-open-source.0",
   "description": "Zambezi Documentation Site Generator for GitBook",
   "license": "MIT",
   "main": "index.js",
