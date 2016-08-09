@@ -2,13 +2,14 @@
   "name": "@zambezi/gitbook-plugin-zambezi-docs",
   "version": "0.1.2",
   "description": "Zambezi Documentation Site Generator for GitBook",
+  "license": "MIT",
   "main": "index.js",
   "engines": {
     "gitbook": "*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zambezi-websdk/gitbook-plugin-zambezi-docs.git"
+    "url": "git+https://github.com/zambezi/gitbook-plugin-zambezi-docs.git"
   },
   "keywords": [
     "zambezi",
@@ -17,9 +18,9 @@
   ],
   "author": "Marcus Stade <marcus@stade.se> (http://madebystade.se/)",
   "bugs": {
-    "url": "https://github.com/zambezi-websdk/gitbook-plugin-zambezi-docs/issues"
+    "url": "https://github.com/zambezi/gitbook-plugin-zambezi-docs/issues"
   },
-  "homepage": "https://github.com/zambezi-websdk/gitbook-plugin-zambezi-docs#readme",
+  "homepage": "https://github.com/zambezi/gitbook-plugin-zambezi-docs#readme",
   "dependencies": {
     "autoprefixer": "6.0.3",
     "babelify": "6.4.0",
